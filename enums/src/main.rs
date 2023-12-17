@@ -1,3 +1,13 @@
+// very important enum is the option eneum
+
 fn main() {
-    println!("Hello, world!");
+    let x = Some(5);
+    match x{
+        None=>{
+            println!("omale");
+        }
+        _=>{
+            println!("otha");
+        }
+    }
 }

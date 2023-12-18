@@ -42,18 +42,18 @@ fn main() {
 
     // now a complex vector -> enum
     #[derive(Debug)]
-    enum gas_prop{
-        dewpt_pressure(f32),
-        dewpt_temp(f32),
+    enum GasProp{
+        DewPtPressure(f32),
+        DewPtTemp(f32),
     }
 
-    let gas1 = vec![gas_prop::dewpt_pressure(12.3), gas_prop::dewpt_temp(273.15), gas_prop::dewpt_temp(300.0)];
+    let gas1 = vec![GasProp::DewPtPressure(12.3), GasProp::DewPtTemp(273.15), GasProp::DewPtTemp(300.0)];
     println!("{:#?}", gas1);
 
-    // use match staements to print only dewpt_temp
+    // use match staements to print only DewPtTemp
     for i in &gas1{
         match i{
-            gas_prop::dewpt_temp(num) => println!("{}", num),
+            GasProp::DewPtTemp(num) => println!("{}", num),
             _ => continue,
         }
     }
